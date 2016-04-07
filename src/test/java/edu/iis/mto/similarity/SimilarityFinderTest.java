@@ -19,9 +19,17 @@ public class SimilarityFinderTest {
 	}
 	
 	@Test
-	public void test() {
+	public void testFirst() {
 		int[] firstSeq = {};
 		int[] secondSeq = {};
+		double result = finder.calculateJackardSimilarity(firstSeq, secondSeq);
+		assertEquals(1.0, result, 0.00001);
+	}
+	
+	@Test
+	public void testSecond() {
+		int[] firstSeq = {1, 2, 3, 4, 5};
+		int[] secondSeq = {1, 2, 3, 4, 5};
 		double result = finder.calculateJackardSimilarity(firstSeq, secondSeq);
 		assertEquals(1.0, result, 0.00001);
 	}
