@@ -65,4 +65,12 @@ public class SimilarityFinderTest {
 		double result = finder.calculateJackardSimilarity(firstSeq, secondSeq);
 		assertTrue(0 <= result && result <= 1.0/9.0);
 	}
+	
+	@Test
+	public void testSeventh() {
+		int[] firstSeq = {1, 2, 3, 4, 5};
+		int[] secondSeq = {10, 7, 9, 6, 8};
+		double result = finder.calculateJackardSimilarity(firstSeq, secondSeq);
+		assertEquals(0.0, result, 0.00001);
+	}
 }
