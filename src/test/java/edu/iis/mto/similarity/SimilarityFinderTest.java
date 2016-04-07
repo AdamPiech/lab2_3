@@ -73,4 +73,12 @@ public class SimilarityFinderTest {
 		double result = finder.calculateJackardSimilarity(firstSeq, secondSeq);
 		assertEquals(0.0, result, 0.00001);
 	}
+	
+	@Test
+	public void testEighth() {
+		int[] firstSeq = {1, 2, 3, 4, 5};
+		int[] secondSeq = {1, 2, 3};
+		double result = finder.calculateJackardSimilarity(firstSeq, secondSeq);
+		assertTrue(0 <= result && result <= 3.0/5.0);
+	}
 }
